@@ -1,7 +1,6 @@
 using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Data;
-using System.Data.Odbc;
 using System.Data.SqlClient;
 
 namespace ProyectoCheques
