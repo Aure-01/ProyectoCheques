@@ -128,6 +128,11 @@
 
         }
 
+        private void txtBoxCorreo_TextChanged_1(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private PictureBox pictureBox1;
