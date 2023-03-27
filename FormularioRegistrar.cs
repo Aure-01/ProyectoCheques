@@ -41,14 +41,16 @@ namespace ProyectoCheques
         {
             MessageBox.Show("Hasta luego");
             FormularioRegistrar reg = new FormularioRegistrar();
-            this.Close();   
+            this.Close();
             Form1 formu = new Form1();
             formu.ShowDialog();
         }
-        private void btnRegistrar_Click(object sender, EventArgs e)
+
+        private void btnRegistrarUsuario_Click(object sender, EventArgs e)
         {
             string connectionString = "Data Source=LAPTOP-AURE;Initial Catalog=Cheques;Persist Security Info=True;User ID=cheques;Password=1234;";
-            string query = "INSERT INTO Usuarios (nombre, contrasena, correo) VALUES (@usuario, @contrasena, @correo)";
+            string query = "INSERT INTO Usuarios (nombre, contrasena, correo_electronico) VALUES (@usuario, @contrasena, @correo)";
+            
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -59,12 +61,12 @@ namespace ProyectoCheques
                     command.Parameters.AddWithValue("@usuario", txtUsuario.Text);
                     command.Parameters.AddWithValue("@contrasena", txtContrasena.Text);
                     command.Parameters.AddWithValue("@correo", txtCorreo.Text);
-                    int rowsAffected = command.ExecuteNonQuery();
+                    int result = command.ExecuteNonQuery();
 
-                    if (rowsAffected > 0)
+                    if (result > 0)
                     {
                         MessageBox.Show("Registro correcto");
-                        FormularioBase formulario = new FormularioBase();
+                        Form1 formulario = new Form1();
                         formulario.Show();
                         this.Hide();
                     }

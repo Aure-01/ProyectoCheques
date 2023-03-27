@@ -34,9 +34,9 @@
             label4 = new Label();
             txtUsuario = new TextBox();
             txtContrasena = new TextBox();
-            txtCorreo = new TextBox();
             btnCancelar = new Button();
-            btnRegistrar = new Button();
+            txtCorreo = new TextBox();
+            btnRegistrarUsuario = new Button();
             SuspendLayout();
             // 
             // label1
@@ -83,6 +83,7 @@
             // txtUsuario
             // 
             txtUsuario.Location = new Point(184, 123);
+            txtUsuario.MaxLength = 100;
             txtUsuario.Name = "txtUsuario";
             txtUsuario.Size = new Size(250, 23);
             txtUsuario.TabIndex = 4;
@@ -91,18 +92,11 @@
             // txtContrasena
             // 
             txtContrasena.Location = new Point(184, 175);
+            txtContrasena.MaxLength = 50;
             txtContrasena.Name = "txtContrasena";
             txtContrasena.Size = new Size(250, 23);
             txtContrasena.TabIndex = 5;
             txtContrasena.TextChanged += txtContrasena_TextChanged;
-            // 
-            // txtCorreo
-            // 
-            txtCorreo.Location = new Point(184, 228);
-            txtCorreo.Name = "txtCorreo";
-            txtCorreo.Size = new Size(250, 23);
-            txtCorreo.TabIndex = 6;
-            txtCorreo.TextChanged += txtCorreo_TextChanged;
             // 
             // btnCancelar
             // 
@@ -115,16 +109,25 @@
             btnCancelar.UseVisualStyleBackColor = true;
             btnCancelar.Click += btnCancelar_Click;
             // 
-            // btnRegistrar
+            // txtCorreo
             // 
-            btnRegistrar.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            btnRegistrar.Location = new Point(184, 353);
-            btnRegistrar.Name = "btnRegistrar";
-            btnRegistrar.Size = new Size(137, 42);
-            btnRegistrar.TabIndex = 8;
-            btnRegistrar.Text = "Registrar";
-            btnRegistrar.UseVisualStyleBackColor = true;
-            btnRegistrar.Click += btnRegistrar_Click;
+            txtCorreo.Location = new Point(184, 228);
+            txtCorreo.MaxLength = 100;
+            txtCorreo.Name = "txtCorreo";
+            txtCorreo.Size = new Size(250, 23);
+            txtCorreo.TabIndex = 6;
+            txtCorreo.TextChanged += txtCorreo_TextChanged;
+            // 
+            // btnRegistrarUsuario
+            // 
+            btnRegistrarUsuario.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnRegistrarUsuario.Location = new Point(169, 353);
+            btnRegistrarUsuario.Name = "btnRegistrarUsuario";
+            btnRegistrarUsuario.Size = new Size(118, 42);
+            btnRegistrarUsuario.TabIndex = 9;
+            btnRegistrarUsuario.Text = "Registrar";
+            btnRegistrarUsuario.UseVisualStyleBackColor = true;
+            btnRegistrarUsuario.Click += btnRegistrarUsuario_Click;
             // 
             // FormularioRegistrar
             // 
@@ -132,7 +135,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 192, 192);
             ClientSize = new Size(800, 450);
-            Controls.Add(btnRegistrar);
+            Controls.Add(btnRegistrarUsuario);
             Controls.Add(btnCancelar);
             Controls.Add(txtCorreo);
             Controls.Add(txtContrasena);
@@ -155,8 +158,8 @@
         private Label label4;
         private TextBox txtUsuario;
         private TextBox txtContrasena;
-        private TextBox txtCorreo;
         private Button btnCancelar;
-        private Button btnRegistrar;
+        private TextBox txtCorreo;
+        private Button btnRegistrarUsuario;
     }
 }
