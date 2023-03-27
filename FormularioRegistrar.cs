@@ -24,7 +24,7 @@ namespace ProyectoCheques
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if(txtContrasena.Text==)
+            
         }
     }
 }

@@ -29,109 +29,105 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContrasena = new System.Windows.Forms.TextBox();
-            this.btnRegistrar = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
+            pictureBox1 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            txtUsuario = new TextBox();
+            txtContrasena = new TextBox();
+            btnRegistrar = new Button();
+            btnLogin = new Button();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(25, 44);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(104, 96);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(25, 44);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(104, 96);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(187, 44);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario: ";
+            label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label1.Location = new Point(187, 44);
+            label1.Name = "label1";
+            label1.Size = new Size(85, 22);
+            label1.TabIndex = 1;
+            label1.Text = "Usuario: ";
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(144, 118);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(107, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Contraseña:";
+            label2.AutoSize = true;
+            label2.Font = new Font("Times New Roman", 14.25F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            label2.Location = new Point(144, 118);
+            label2.Name = "label2";
+            label2.Size = new Size(107, 22);
+            label2.TabIndex = 2;
+            label2.Text = "Contraseña:";
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(267, 43);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(303, 23);
-            this.txtUsuario.TabIndex = 3;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtBoxCorreo_TextChanged_1);
+            txtUsuario.Location = new Point(267, 43);
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.Size = new Size(303, 23);
+            txtUsuario.TabIndex = 3;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
             // 
             // txtContrasena
             // 
-            this.txtContrasena.Location = new System.Drawing.Point(267, 117);
-            this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(303, 23);
-            this.txtContrasena.TabIndex = 4;
+            txtContrasena.Location = new Point(267, 117);
+            txtContrasena.Name = "txtContrasena";
+            txtContrasena.Size = new Size(303, 23);
+            txtContrasena.TabIndex = 4;
+            txtContrasena.TextChanged += txtContrasena_TextChanged;
             // 
             // btnRegistrar
             // 
-            this.btnRegistrar.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnRegistrar.Location = new System.Drawing.Point(309, 184);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(106, 40);
-            this.btnRegistrar.TabIndex = 6;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = true;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            btnRegistrar.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnRegistrar.Location = new Point(309, 184);
+            btnRegistrar.Name = "btnRegistrar";
+            btnRegistrar.Size = new Size(106, 40);
+            btnRegistrar.TabIndex = 6;
+            btnRegistrar.Text = "Registrar";
+            btnRegistrar.UseVisualStyleBackColor = true;
+            btnRegistrar.Click += btnRegistrar_Click;
             // 
             // btnLogin
             // 
-            this.btnLogin.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.btnLogin.Location = new System.Drawing.Point(106, 186);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(113, 38);
-            this.btnLogin.TabIndex = 7;
-            this.btnLogin.Text = "Ingresar";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            btnLogin.Font = new Font("Times New Roman", 12F, FontStyle.Italic, GraphicsUnit.Point);
+            btnLogin.Location = new Point(106, 186);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(113, 38);
+            btnLogin.TabIndex = 7;
+            btnLogin.Text = "Ingresar";
+            btnLogin.UseVisualStyleBackColor = true;
+            btnLogin.Click += btnLogin_Click;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.ClientSize = new System.Drawing.Size(610, 233);
-            this.Controls.Add(this.btnLogin);
-            this.Controls.Add(this.btnRegistrar);
-            this.Controls.Add(this.txtContrasena);
-            this.Controls.Add(this.txtUsuario);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.LightSteelBlue;
+            ClientSize = new Size(610, 233);
+            Controls.Add(btnLogin);
+            Controls.Add(btnRegistrar);
+            Controls.Add(txtContrasena);
+            Controls.Add(txtUsuario);
+            Controls.Add(label2);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load_1;
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
-        private void txtBoxCorreo_TextChanged_1(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
-        }
 
         #endregion
 
