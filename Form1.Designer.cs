@@ -81,8 +81,10 @@
             // 
             txtContrasena.Location = new Point(267, 117);
             txtContrasena.Name = "txtContrasena";
+            txtContrasena.PasswordChar = '*';
             txtContrasena.Size = new Size(303, 23);
             txtContrasena.TabIndex = 4;
+            txtContrasena.UseSystemPasswordChar = true;
             txtContrasena.TextChanged += txtContrasena_TextChanged;
             // 
             // btnRegistrar
@@ -135,8 +137,8 @@
         private Label label1;
         private Label label2;
         private TextBox txtUsuario;
-        private TextBox txtContrasena;
         private Button btnRegistrar;
         private Button btnLogin;
+        internal protected TextBox txtContrasena;
     }
 }
